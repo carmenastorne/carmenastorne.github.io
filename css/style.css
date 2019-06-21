@@ -18,13 +18,18 @@ h1, h2, h3, h4 {
 
 
 h1 {
-	font-size: 22pt; 
+	font-size: 18pt; 
 	color: rgb(0, 112, 192);
+}
+
+h1 b {
+	font-size: 14pt; 
+	color: rgb(90, 90, 90);
 }
 
 h2 {
 	font-size: 16pt; 
-	color: rgb(31, 56, 100);
+	color: rgb(90, 90, 90);
 }
 
 h2 a {
@@ -40,6 +45,8 @@ h3 a {
 
 h3 {
 	font-size: 14pt; 
+	color: rgb(99, 99, 99);
+	padding-left: 20px; 
 }
 
 h3 b {
@@ -51,7 +58,7 @@ h3 a:hover {
 	text-decoration: underline;
 }
 
-h4 a {
+h4, h4 a {
 	font-size: 14pt; 
 	color: rgb(90, 90, 90);
 	text-decoration: none;
@@ -78,6 +85,10 @@ p a:hover {
 	text-decoration: none;
 }
 
+ul {
+	margin-bottom: 50px; 
+}
+
 br.clearfix {
 	clear: both;
 }
@@ -90,8 +101,7 @@ br.clearfix {
 	overflow: hidden;
 	background-color: rgb(255, 255, 255);
 	padding: 20px 10px; 
-	margin-left: 0px;
-	margin-right: 20px; 
+	margin-right: 75px; 
 	word-spacing: 10px;
 	position: fixed;
 	border-bottom: 0.5px solid rgb(65, 65, 65);
@@ -111,6 +121,7 @@ br.clearfix {
 .links ul {
 	list-style: none;
 	text-align: center;
+	margin-bottom: 5px;
 }
 
 .links ul li {
@@ -162,64 +173,7 @@ button:hover a {
 #content {
 	float: none;
 	padding: 150px 0px 0px;
-	margin-right: 75px;
-}
-
-/* 
- *  this adds a bar above a "content section" 
- *  to split them up visually 
- */ 
-
-#contentSection {
-	padding: 20px 10px; 
-	border-top: ridge 1px #c9c9c9;
-}
-
-/*
- *  page nav sits at the top of a page 
- *  and povides "anchored" links to sections 
- *  below. 
- */
-
-#pagenav {
-	padding: 10px 10px;
-	font-size: 11pt; 
-	text-align: center;
-	word-spacing: 30px; 
-}
-
-#pagenav a {
-	color: rgb(226, 183, 39);
-	text-decoration: none;
-}
-
-#pagenav a:hover {
-	color: rgb(0, 34, 144); 
-	text-decoration: underline;
-}
-
-/* 
- *  this provides an internal jump 
- *  point for references to points on a page.  
- */ 
-
-.anchorRef {
-	display: block;
-    position: relative;
-	top: -100px;
-	visibility: hidden;
-}
-
-/* 
- *  header for each page. 
- *  in this case, just my name 
- *  and the purpose of the page. 
- */ 
-
-#myName h1, #myName h2 {
-	display: block; 
-	text-align: center; 
-	float: center; 
+	margin-right: 100px;
 }
 
 /*
@@ -251,12 +205,23 @@ button:hover a {
 /******************************/
 /* SPECIFIC TO A CERTAIN PAGE */
 
-#contactInfo h1, #contactInfo h2,
-#contactInfo h3, #contactInfo h4 {
-	text-align: center;
-	color: rgb(0, 49, 139); 
-	display: block; 
-	float: center; 
+#course {
+	line-height: 2; 
+}
+
+#course h4 {
+	color: rgb(90, 90, 90);
+	padding-left: 20px;
+	margin: 0px;
+}
+
+#affiliation {
+	font-size: 22pt; 
+	color: rgb(0, 112, 192);
+}
+
+#email {
+	padding-left: 0px;
 }
 
 .box {
@@ -291,14 +256,9 @@ img {
 	padding: 10px 30px;
 }
 
-#paper {
-	color: rgb(0, 49, 139); 
-	text-decoration: none;
-}
-
-#paper:hover {
-	color: rgb(226, 183, 39);
-	text-decoration: underline;
+#content-box4 {
+	width: 100%; 
+	padding: 10px 50px 10px 75px;
 }
 
 /* SMALLER BROWSER WINDOW */
@@ -321,15 +281,19 @@ img {
 	}
 
 	.box h1 {
-		font-size: 32pt;	
+		font-size: 28pt;	
 	}
 
 	.box h2, .box h2 a {
-		font-size: 22pt; 
+		font-size: 18pt; 
+	}
+
+	.box h4, .box h4 a {
+		font-size: 18pt;
 	}
 
 	.box h3 a {
-		font-size: 20pt;
+		font-size: 22pt;
 	}
 
 	#content {
@@ -347,6 +311,25 @@ img {
 		display: block; 
 		float: none; 
 		padding-top: 20px;
+	}
+
+	#affiliation {
+		font-size: 28pt; 
+	}
+
+	#course {
+		padding: 0px; 
+		margin: 0px; 
+		line-height: 1;
+	}
+
+	#course h4, #course ul {
+		margin-left: 20px; 
+	}
+
+	#course ul {
+		line-height: 2;
+		font-size: 16pt; 
 	}
 }
 
@@ -374,10 +357,6 @@ img {
 		float: left;
 		display: block;
 		color: rgb(179, 179, 179);
-	}
-	
-	.about {
-		padding-top: 10%; 
 	}
 
 	p {
@@ -472,10 +451,10 @@ img {
  *  and sets a hard coded minimum width. 
  */
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 850px) {
 
 	#wrapper {
-		width: 650px;
+		width: 850px;
 	}
 
 	img {
