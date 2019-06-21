@@ -140,7 +140,8 @@ button {
 }
 
 button a {
-	color: rgb(226, 183, 39);
+	color: rgb(31,	56,	100);
+	/* color: rgb(226, 183, 39); */ 
 	font-size: 20px;
 	text-decoration: none;
 }
@@ -150,7 +151,8 @@ button:hover {
 }
 
 button:hover a {
-	color: rgb(179, 179, 179); 
+	/* color: rgb(179, 179, 179); */ 
+	color: rgb(255, 206, 44);
 	text-decoration: underline;
 }
 
@@ -161,7 +163,8 @@ button:hover a {
 } 
 
 #active a:hover {
-	color: rgb(179, 179, 179);
+	/* color: rgb(179, 179, 179); */ 
+	color: rgb(255, 206, 44);
 	font-weight: normal;
 } 
 
@@ -355,13 +358,15 @@ img {
 		padding-left: 100px;
 		float: left;
 		display: block;
-		color: rgb(226, 182, 39);
+		color: rgb(226, 182, 39); 
+		/*  color: rgb(31,	56,	100); */
 	}
 
 	.topnav a:hover {
 		float: left;
 		display: block;
-		color: rgb(179, 179, 179);
+		/* color: rgb(179, 179, 179); */ 
+		color: rgb(255, 206, 44);
 	}
 
 	p {
@@ -399,14 +404,15 @@ img {
 		position: absolute;
 		left: 10px;
 		top: 60px;
-		color: rgb(226, 183, 39);
+		color: rgb(226, 183, 39); 
+		/* color: rgb(31,	56,	100); */ 
 	}
 
 	.topnav.responsive a.icon:hover {
 		position: absolute;
 		left: 10px;
 		top: 60px;
-		color: rgb(179, 179, 179);
+		color: rgb(255, 206, 44);
 	}
 
 	.links.responsive {
@@ -436,7 +442,8 @@ img {
 	}
 	
 	.links.responsive ul li button a {
-		color: rgb(226, 183, 39);
+		color: rgb(31,	56,	100);
+		/* color: rgb(226, 183, 39); */
 		font-size: 32px;
 		text-decoration: none;
 	}
@@ -446,7 +453,7 @@ img {
 	}
 	
 	.links.responsive ul li button:hover a {
-		color: rgb(179, 179, 179); 
+		color: rgb(255, 206, 44); 
 		text-decoration: underline;
 	}
 }
